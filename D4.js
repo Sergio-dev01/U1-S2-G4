@@ -147,8 +147,27 @@ console.log(upperFirst("Ciao a tutti, il cervello sta fumando"));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+function cutString(phrase2) {
+  let newPhrase = phrase2.slice(1, phrase2.length - 1);
+  return newPhrase;
+}
+console.log(cutString("Taglia"));
+
 /* ESERCIZIO 10
  Scrivi una funzione di nome "giveMeRandom", che accetta come parametro un numero n e ritorna un'array contenente n numeri casuali inclusi tra 0 e 10.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+function giveMeRandom(n) {
+  const arrayNum = [];
+
+  for (i = 0; i < n; i++) {
+    let randomNum = Math.floor(Math.random() * 11);
+    arrayNum.push(randomNum);
+  }
+
+  return arrayNum;
+}
+
+console.log(giveMeRandom(55));
